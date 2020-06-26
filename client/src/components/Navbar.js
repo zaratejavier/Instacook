@@ -17,7 +17,7 @@ class NavBar extends React.Component{
         <Menu.Menu position="right">
           <Menu.Item 
             name = 'Logout'
-            onClick = { () => handleLogout(this.props.history)}
+            onClick={() => handleLogout(this.props.history)}
           />
         </Menu.Menu>
       )
@@ -57,7 +57,10 @@ class NavBar extends React.Component{
               active={this.props.location.pathname === '/'}
             />
           </Link>
+            <h1 style={{textAlign: "center"}}>Instacook</h1>
+
           {this.rightNavItems()}
+          
         </Menu>
       </div>
     )
