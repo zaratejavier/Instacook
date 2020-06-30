@@ -57,8 +57,6 @@ class NavBar extends React.Component{
               active={this.props.location.pathname === '/'}
             />
           </Link>
-            <h1 style={{textAlign: "center"}}>Instacook</h1>
-
           {this.rightNavItems()}
           
         </Menu>

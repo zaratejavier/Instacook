@@ -18,8 +18,10 @@ function App() {
     <Navbar/>
     <FetchUser>
       <Container>
-        <Switch>
-          <ProtectedRoute exact path="/" component={Home} />
+          <Switch>
+          {/* <ProtectedRoute exact path="/" component={Home} /> */}
+            {/* make sure to change this back after im done********************************************************* */}
+          <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login}/>
           <Route exact path="/Register" component={Register}/>
           <Route component={NoMatch}/>
