@@ -45,6 +45,7 @@ const Home = () => {
           <i className="search icon"/>
         </Button>
       </Form>
+      
       <div className='recipes'>
         {recipes.map(recipe => (
           <Recipe

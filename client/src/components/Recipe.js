@@ -7,6 +7,7 @@ const Recipe = ({title, calories, image}) => {
         <Image src={image}  wrapped ui={false}/>
         <CardHeader>{title}</CardHeader>
       <Card.Meta>{calories}</Card.Meta>
+      <i class="heart outline icon"></i>
     </Card>
   )
 }
