@@ -1,12 +1,13 @@
 import React from "react"
+import { Card, CardHeader, Image } from "semantic-ui-react"
 
 const Recipe = ({title, calories, image}) => {
   return (
-    <div>
-      <h1>Title: {title}</h1>
-      <p>Calories: {calories}</p>
-      <img src={image} alt=""/>
-    </div>
+    <Card>
+        <Image src={image}  wrapped ui={false} />
+        <CardHeader>{title}</CardHeader>
+      <Card.Meta>{calories}</Card.Meta>
+    </Card>
   )
 }
 
