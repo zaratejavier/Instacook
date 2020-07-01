@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+}
+
+.recipes{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .App-logo {

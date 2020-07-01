@@ -3,12 +3,18 @@ import { Card, CardHeader, Image } from "semantic-ui-react"
 
 const Recipe = ({title, calories, image}) => {
   return (
-    <Card>
-        <Image src={image}  wrapped ui={false} />
+    <Card style={styles.containerList}>
+        <Image src={image}  wrapped ui={false}/>
         <CardHeader>{title}</CardHeader>
       <Card.Meta>{calories}</Card.Meta>
     </Card>
   )
 }
 
+const styles = {
+   listContainer: {
+    display: "flex",
+    justifyContent: "space-around"
+  }
+}
 export default Recipe

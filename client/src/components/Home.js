@@ -42,22 +42,26 @@ const Home = () => {
         <Button
           className="search-button"
           type="submit" >
-          <i class="search icon"/>
+          <i className="search icon"/>
         </Button>
       </Form>
-      {recipes.map(recipe => (
-        <Recipe
-          key={recipe.recipe.label} // just for now
-          title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
-        />
-      ))}
+      <div className='recipes'>
+        {recipes.map(recipe => (
+          <Recipe
+            // key={recipe.recipe.label} // just for now
+            title={recipe.recipe.label}
+            calories={recipe.recipe.calories}
+            image={recipe.recipe.image}
+          />
+        ))}
+      </div>
       
 
       </>
   )
 }
+
+
 
 
 export default Home
