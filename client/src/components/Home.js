@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
 import { Header, Form, Button } from "semantic-ui-react"
 import Recipe from "./Recipe"
-import {APP_ID, APP_key} from '../env'
+import { APP_ID, APP_key } from '../env'
 
 const Home = () => {
   const [recipes, setRecipes] = useState([])
@@ -18,6 +18,7 @@ const Home = () => {
     console.log(data)
     setRecipes(data.hits)
   }
+
 
   const updateSearch = e => {
     setSearch(e.target.value) //this allows us to get what the use is typing 
@@ -49,10 +50,11 @@ const Home = () => {
       <div className='recipes'>
         {recipes.map(recipe => (
           <Recipe
-            // key={recipe.recipe.label} // just for now
+            key={recipe.recipe.id} // just for now
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
+            // time={recipe.recipe.totalTime}
           />
         ))}
       </div>
@@ -61,8 +63,5 @@ const Home = () => {
       </>
   )
 }
-
-
-
 
 export default Home
