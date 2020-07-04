@@ -34,7 +34,7 @@ const Home = () => {
     <>
       <Header as='h3' textAlign='center' >InstaCook</Header>
       
-      <Form onSubmit={getSearch} className="search-form">
+      <Form onSubmit={getSearch} className="search-form" style={styles.search}>
         <input className="search-bar"
           type="text"
           placeholder="Search"
@@ -42,6 +42,7 @@ const Home = () => {
         />
         <Button
           className="search-button"
+          style={styles.searchButton}
           type="submit" >
           <i className="search icon"/>
         </Button>
@@ -58,10 +59,20 @@ const Home = () => {
           />
         ))}
       </div>
-      
-
-      </>
+     </>
   )
+}
+
+const styles = {
+  search: {
+    display: "flex",
+    justifyContent: "space-around"
+  },
+  searchButton: {
+    border: "none",
+    padding: "10px 20px",
+    color: "black",
+  }
 }
 
 export default Home
